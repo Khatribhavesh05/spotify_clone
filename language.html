@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choose Language</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .language-box {
+      background-color: #2a2a2a;
+      padding: 40px 30px;
+      border-radius: 20px;
+      border: 2px solid #1db954;
+      text-align: center;
+      box-shadow: 0 0 15px #1db95455;
+    }
+
+    h1 {
+      color: #1db954;
+      margin-bottom: 20px;
+    }
+
+    .lang-option {
+      margin: 10px 0;
+      font-size: 1.1rem;
+      padding: 10px;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      transition: 0.2s ease;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    .lang-option.selected {
+      background-color: #1db95433;
+      border: 1px solid #1db954;
+      font-weight: bold;
+      opacity: 1;
+      cursor: default;
+    }
+
+    .note {
+      margin-top: 20px;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="language-box">
+    <h1>Choose Your Language</h1>
+    <div class="lang-option selected">English (Selected)</div>
+    <div class="lang-option">Hindi</div>
+    <div class="lang-option">Spanish</div>
+    <div class="lang-option">French</div>
+    <div class="lang-option">German</div>
+    <p class="note">Language change support coming soon!</p>
+  </div>
+</body>
+</html>

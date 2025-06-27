@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- ========== HEADER / NAVBAR ========== -->
+<header>
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" class="spotify-logo" alt="Spotify" />
+      <div class="home-circle"><i class="fas fa-home"></i></div>
+      <div class="search-bar">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" placeholder="What do you want to play?" />
+        <i class="fas fa-microphone mic-icon"></i>
+      </div>
+    </div>
+    <div class="nav-right">
+      <a href="./premium_error.html" class="nav-link">Premium</a>
+      <a href="./support_error.html" class="nav-link">Support</a>
+      <a href="./download_error.html" class="nav-link">Download</a>
+      <div class="divider"></div>
+      <a href="./install_error.html" class="nav-link">Install App</a>
+      <a href="./signup_error.html" class="nav-link">Sign up</a>
+      <a href="./login.html"><button id="login-button">Log in</button></a>
+    </div>
+  </nav>
+</header>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main>
+  <div class="main-layout">
+    
+    <!-- ===== SIDEBAR ===== -->
+    <div class="sidebar">
+      <h2>Your Library</h2>
+      <div class="scroll-content">
+        <div class="card">
+          <h3>Create your first playlist</h3>
+          <p>It's easy, we'll help you</p>
+          <a href="./error.html"><button class="create-btn">Create playlist</button></a>
+        </div>
+        <div class="card">
+          <h3>Let's find some podcasts to follow</h3>
+          <p>We'll keep you updated on new episodes</p>
+          <a href="./error.html"><button class="create-btn">Browse podcasts</button></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="./time-error.html">Legal</a>
+        <a href="./time-error.html">Privacy</a>
+        <a href="./time-error.html">Cookies</a>
+      </div>
+    </div>
+
+    <!-- ===== SONGS SECTION ===== -->
+    <div class="songs-grid">
+      <h2 class="section-heading">Top Songs</h2>
+      <div class="song-grid-container">
+        <!-- Song 1 -->
+        <div class="song-box">
+          <img src="images/song1.jpg" class="song-img" alt="Song 1 Thumbnail">
+          <p class="song-title">Brown Rang</p>
+          <p class="song-artist">Honey Singh</p>
+          <button class="play-btn" onclick="togglePlay(this, 'songs/song1.mp3')">▶</button>
+        </div>
+
+        <!-- Song 2 -->
+        <div class="song-box">
+          <img src="images/song2.jpg" class="song-img" alt="Song 2 Thumbnail">
+          <p class="song-title">Millionaire</p>
+          <p class="song-artist">Honey Singh</p>
+          <button class="play-btn" onclick="togglePlay(this, 'songs/song2.mp3')">▶</button>
+        </div>
+
+        <!-- Song 3 -->
+        <div class="song-box">
+          <img src="images/song3.jpg" class="song-img" alt="Song 3 Thumbnail">
+          <p class="song-title">Blue Eyes</p>
+          <p class="song-artist">Honey Singh</p>
+          <button class="play-btn" onclick="togglePlay(this, 'songs/song3.mp3')">▶</button>
+        </div>
+
+        <!-- Song 4 -->
+        <div class="song-box">
+          <img src="images/song4.jpg" class="song-img" alt="Song 4 Thumbnail">
+          <p class="song-title">Wavy</p>
+          <p class="song-artist">Karan Aujla</p>
+          <button class="play-btn" onclick="togglePlay(this, 'songs/song4.mp3')">▶</button>
+        </div>
+
+        <!-- Song 5 -->
+        <div class="song-box">
+          <img src="images/song5.jpg" class="song-img" alt="Song 5 Thumbnail">
+          <p class="song-title">Admiring You</p>
+          <p class="song-artist">Karan Aujla</p>
+          <button class="play-btn" onclick="togglePlay(this, 'songs/song5.mp3')">▶</button>
+        </div>
+
+        <!-- Song 6 -->
+        <div class="song-box">
+          <img src="images/song6.jpg" class="song-img" alt="Song 6 Thumbnail">
+          <p class="song-title">Softly</p>
+          <p class="song-artist">Karan Aujla</p>
+          <button class="play-btn" onclick="togglePlay(this, 'songs/song6.mp3')">▶</button>
+        </div>
+
+        <!-- Song 7 -->
+        <div class="song-box">
+          <img src="images/song7.jpg" class="song-img" alt="Song 7 Thumbnail">
+          <p class="song-title">Born to Shine</p>
+          <p class="song-artist">Diljit Dosanjh</p>
+          <button class="play-btn" onclick="togglePlay(this, 'songs/song7.mp3')">▶</button>
+        </div>
+
+        <!-- Song 8 -->
+        <div class="song-box">
+          <img src="images/song8.jpg" class="song-img" alt="Song 8 Thumbnail">
+          <p class="song-title">Ishq di bajiyan</p>
+          <p class="song-artist">Diljit Dosanjh</p>
+          <button class="play-btn" onclick="togglePlay(this, 'songs/song8.mp3')">▶</button>
+        </div>
+
+        <!-- Song 9 -->
+        <div class="song-box">
+          <img src="images/song9.jpg" class="song-img" alt="Song 9 Thumbnail">
+          <p class="song-title">Goat</p>
+          <p class="song-artist">Diljit Dosanjh</p>
+          <button class="play-btn" onclick="togglePlay(this, 'songs/song9.mp3')">▶</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ========== AUDIO PLAYER SCRIPT ========== -->
+<script>
+  let currentAudio = null;
+  let currentButton = null;
+
+  function togglePlay(button, src) {
+    if (currentAudio && currentAudio.src.includes(src)) {
+      if (!currentAudio.paused) {
+        currentAudio.pause();
+        button.textContent = "▶";
+      } else {
+        currentAudio.play();
+        button.textContent = "⏸";
+      }
+    } else {
+      if (currentAudio) {
+        currentAudio.pause();
+        if (currentButton) currentButton.textContent = "▶";
+      }
+      currentAudio = new Audio(src);
+      currentAudio.play();
+      button.textContent = "⏸";
+      currentButton = button;
+    }
+  }
+</script>
+
+<!-- ========== FOOTER ========== -->
+<footer class="main-footer">
+  <div class="footer-links">
+    <a href="./error.html">About</a>
+    <a href="./error.html">Jobs</a>
+    <a href="./error.html">For the Record</a>
+    <a href="./error.html">For Artists</a>
+    <a href="./error.html">Developers</a>
+    <a href="./error.html">Investors</a>
+    <a href="./error.html">Vendors</a>
+  </div>
+</footer>
+
+</body>
+</html>
